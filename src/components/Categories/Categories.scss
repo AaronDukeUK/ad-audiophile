@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.categories {
+  padding: 40px 24px;
+  margin: 0 auto;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__section {
+    width: 100%;
+    height: 165px;
+    background-color: $grey;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    &:nth-child(1) {
+      margin-top: 50px;
+    }
+    &:nth-child(2) {
+      margin: 75px 0;
+    }
+  }
+  &__image {
+    height: 104px;
+  }
+  &__blur {
+    width: 95px;
+    min-height: 15px;
+    background-color: $black;
+    filter: blur(25px);
+    margin: -10px 0 25px 0;
+  }
+  &__title {
+    font-weight: $weight-header;
+    letter-spacing: 1.07px;
+    text-transform: uppercase;
+  }
+  &__button {
+    margin: 17px 0 22px 0;
+  }
+}

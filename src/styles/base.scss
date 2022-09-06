@@ -1,0 +1,113 @@
+@import "./variables.scss";
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: $family-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $family-header;
+  font-weight: $weight-header;
+  text-transform: uppercase;
+  color: $black;
+}
+
+h1 {
+  font-size: $size-h1;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: $size-h2;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  font-size: $size-h3;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+
+h4 {
+  font-size: $size-h4;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-size: $size-h5;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+
+h6 {
+  font-size: $size-h6;
+  line-height: 24px;
+  letter-spacing: 1.3px;
+}
+
+p {
+  font-family: $family-body;
+  font-weight: $weight-body;
+  font-size: $size-body;
+  color: $black;
+  line-height: 25px;
+}
+
+small {
+  font-family: $family-body;
+  font-weight: $weight-overline;
+  font-size: $size-overline;
+  color: $tan;
+  line-height: 19px;
+  letter-spacing: 10px;
+}
+
+a {
+  font-weight: $weight-button;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: $family-body;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+button {
+  font-weight: $weight-button;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: $family-body;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  padding: 15px 30px;
+  &--orange {
+    background-color: $tan;
+    color: $white;
+  }
+  &--black {
+    color: $white;
+    background-color: $black;
+  }
+  &--outline {
+    color: $black;
+    background: transparent;
+    border: 1px solid $black;
+  }
+}
