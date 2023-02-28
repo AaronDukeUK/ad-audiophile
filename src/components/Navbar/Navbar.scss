@@ -12,11 +12,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (width >= 768px) {
+      justify-content: flex-start;
+      gap: 42px;
+    }
   }
   &__burger {
     cursor: pointer;
   }
   &__cart {
     cursor: pointer;
+    @media screen and (width >= 768px) {
+      margin-left: auto;
+    }
   }
 }

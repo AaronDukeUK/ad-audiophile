@@ -22,7 +22,6 @@ export function SiteProvider({ children }) {
   const loader = document.querySelector(".loader")
 
   useEffect(() => {
-    console.log(loading)
     if (loading) {
       loader.classList.add("loader--active")
     }

@@ -33,14 +33,15 @@ export default function FeaturedProducts() {
             SEE PRODUCT
           </Link>
         </div>
+        <div className="featured__container">
+          <div className="featured__item featured__item--image"></div>
 
-        <div className="featured__item featured__item--image"></div>
-
-        <div className="featured__item featured__item--text">
-          <h4 className="featured__title">YX1 EARPHONES</h4>
-          <Link className="button button--outline" to="/">
-            SEE PRODUCT
-          </Link>
+          <div className="featured__item featured__item--text">
+            <h4 className="featured__title">YX1 EARPHONES</h4>
+            <Link className="button button--outline" to="/">
+              SEE PRODUCT
+            </Link>
+          </div>
         </div>
       </div>
     )

@@ -5,8 +5,18 @@
   scroll-behavior: smooth;
 }
 
-* {
-  font-family: $family-body;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+a,
+button {
+  font-family: "Manrope", sans-serif;
+  color: $black;
 }
 
 h1,
@@ -15,81 +25,83 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $family-header;
-  font-weight: $weight-header;
   text-transform: uppercase;
-  color: $black;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: $size-h1;
+  font-size: 3.5rem;
   line-height: 58px;
   letter-spacing: 2px;
 }
 
 h2 {
-  font-size: $size-h2;
+  font-size: 2.25rem;
   line-height: 44px;
   letter-spacing: 1.5px;
+  max-width: 379px;
+  @media screen and (width >= 768px) {
+    font-size: 3.5rem;
+    line-height: 58px;
+  }
 }
 
 h3 {
-  font-size: $size-h3;
+  font-size: 2rem;
   line-height: 36px;
   letter-spacing: 1.15px;
 }
 
 h4 {
-  font-size: $size-h4;
+  font-size: 1.75rem;
   line-height: 38px;
   letter-spacing: 2px;
+  @media screen and (width >= 768px) {
+    font-size: 2.5rem;
+    line-height: 44px;
+  }
 }
 
 h5 {
-  font-size: $size-h5;
+  font-size: 1.5rem;
   line-height: 33px;
   letter-spacing: 1.7px;
 }
 
 h6 {
-  font-size: $size-h6;
+  font-size: 1.125rem;
   line-height: 24px;
   letter-spacing: 1.3px;
 }
 
 p {
-  font-family: $family-body;
-  font-weight: $weight-body;
-  font-size: $size-body;
+  font-size: 0.938rem;
   color: $black;
   line-height: 25px;
 }
 
 small {
-  font-family: $family-body;
-  font-weight: $weight-overline;
-  font-size: $size-overline;
+  font-weight: 400;
+  font-size: 0.875rem;
   color: $tan;
   line-height: 19px;
   letter-spacing: 10px;
 }
 
 a {
-  font-weight: $weight-button;
+  font-weight: 700;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
-  font-family: $family-body;
-  font-size: 13px;
+  font-size: 0.813rem;
   line-height: 18px;
   letter-spacing: 1px;
 }
 
 button {
-  font-weight: $weight-button;
+  font-weight: 700;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
-  font-family: $family-body;
-  font-size: 13px;
+  font-size: 0.813rem;
   line-height: 18px;
   letter-spacing: 1px;
   border: none;
@@ -111,4 +123,10 @@ button {
     background: transparent;
     border: 1px solid $black;
   }
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
 }

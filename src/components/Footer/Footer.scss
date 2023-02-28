@@ -10,10 +10,17 @@
   text-align: center;
   padding: 0 24px 38px 24px;
   gap: 48px;
+  @media screen and (width >= 768px) {
+    align-items: flex-start;
+    gap: 32px;
+  }
   &__line {
     width: 101px;
     height: 4px;
     background-color: $tan;
+    @media screen and (width >= 768px) {
+      margin-bottom: 24px;
+    }
   }
   &__nav {
     display: flex;
@@ -21,6 +28,10 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    @media screen and (width >= 768px) {
+      flex-direction: row;
+      gap: 34px;
+    }
   }
   &__navlink {
     color: $white;
@@ -32,6 +43,23 @@
     color: $white;
     opacity: 0.5;
     max-width: 327px;
+    @media screen and (width >= 768px) {
+      max-width: 680px;
+      text-align: left;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+    @media screen and (width >= 768px) {
+      margin-top: 48px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   &__copyright {
     color: $white;
@@ -43,7 +71,5 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
-  }
-  &__sociallink {
   }
 }

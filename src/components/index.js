@@ -1,5 +1,4 @@
 import Navbar from "./Navbar/Navbar"
-import Logo from "./Logo/Logo"
 import MobileMenu from "./MobileMenu/MobileMenu"
 import CartIcon from "./CartIcon/CartIcon"
 import ArrowRight from "./ArrowRight/ArrowRight"
@@ -11,7 +10,6 @@ import ShoppingCart from "./ShoppingCart/ShoppingCart"
 
 export {
   Navbar,
-  Logo,
   MobileMenu,
   CartIcon,
   ArrowRight,

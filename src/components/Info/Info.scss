@@ -8,18 +8,35 @@
   text-align: center;
   max-width: 375px;
   margin: 0 auto;
-  padding: 40px 24px 120px 24px;
+  padding: 40px 0 120px 0;
+  @media screen and (width >= 768px) {
+    max-width: 689px;
+  }
   &__image {
-    width: 100%;
+    background-image: url("../../assets/info/info-mobile.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 327px;
     border-radius: 8px;
+    margin: 0 20px;
+    @media screen and (width >= 768px) {
+      background-image: url("../../assets/info/info-tablet.png");
+      width: 689px;
+    }
   }
   &__title {
-    margin: 40px 0 32px 0;
+    margin: 40px 24px 32px 24px;
+    @media screen and (width >= 768px) {
+      margin-top: 63px;
+    }
   }
   &__orange {
     color: $tan;
   }
   &__body {
     opacity: 0.5;
+    margin: 0px 24px;
+    max-width: 573px;
   }
 }

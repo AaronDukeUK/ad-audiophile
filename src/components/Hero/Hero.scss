@@ -10,22 +10,33 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  background-image: url("../../assets/hero/hero-mobile.png");
+  @media screen and (width >= 768px) {
+    height: 769px;
+    background-image: url("../../assets/hero/hero-tablet.png");
+  }
+
   &__overline {
     color: $white;
     opacity: 0.5;
     margin: 85px 0 16px 0;
   }
+
   &__title {
     color: $white;
-    font-size: 2.25rem;
     &:last-of-type {
       margin-bottom: 24px;
     }
   }
+
   &__body {
     color: $white;
     opacity: 0.75;
     max-width: 328px;
     margin-bottom: 28px;
+    @media screen and (width >= 768px) {
+      margin-bottom: 40px;
+      max-width: 349px;
+    }
   }
 }

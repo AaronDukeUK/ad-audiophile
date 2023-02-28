@@ -6,6 +6,20 @@
   justify-items: center;
   gap: 24px;
 
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    @media screen and (width >= 768px) {
+      flex-direction: row;
+      gap: 10px;
+      max-width: 689px;
+    }
+  }
+
   &__item {
     max-width: 327px;
     width: 100%;
@@ -15,29 +29,54 @@
     border-radius: 8px;
     background-repeat: no-repeat;
     background-position: center;
+    @media screen and (width >= 768px) {
+      max-width: 689px;
+      background-size: cover;
+      padding: 64px 24px;
+    }
     &--main {
       text-align: center;
       background-position: center top;
       background-color: $tan;
       align-items: center;
       justify-content: center;
-      background-image: url("../../assets/featured/circles.png");
+      background-image: url("../../assets/featured/main-mobile.png");
+      @media screen and (width >= 768px) {
+        background-image: url("../../assets/featured/main-tablet.png");
+        h4 {
+          font-size: 3.5rem;
+          line-height: 56px;
+        }
+      }
     }
     &--speaker {
-      background-image: url("../../assets/featured/featured-speaker-bg.png");
+      background-image: url("../../assets/featured/zx7-mobile.png");
       align-items: flex-start;
       justify-content: center;
       height: 320px;
+      @media screen and (width >= 768px) {
+        background-image: url("../../assets/featured/zx7-tablet.png");
+
+        padding-left: 62px;
+      }
     }
     &--image {
-      background-image: url("../../assets/featured/featured-earphones-bg.png");
+      background-image: url("../../assets/featured/yx1-mobile.png");
       height: 200px;
+      @media screen and (width >= 768px) {
+        height: 320px;
+        background-image: url("../../assets/featured/yx1-tablet.png");
+      }
     }
     &--text {
       background-color: $grey;
       align-items: flex-start;
       justify-content: center;
       height: 200px;
+      @media screen and (width >= 768px) {
+        height: 320px;
+        padding-left: 42px;
+      }
     }
   }
   &__image {
@@ -56,6 +95,7 @@
     &--white {
       margin: 24px 0;
       color: $white;
+      max-width: 349px;
     }
   }
 }
