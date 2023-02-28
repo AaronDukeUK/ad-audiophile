@@ -9,7 +9,7 @@ import { useState, useEffect } from "react"
 import { useSite } from "../../context/SiteContext"
 
 export default function Category() {
-  const { setLoading, loading } = useSite()
+  const { setLoading } = useSite()
 
   const { category: categoryRef } = useParams()
 
@@ -40,14 +40,14 @@ export default function Category() {
       setLoading(false)
     }
     fetchData().catch(console.error)
-  }, [categoryProductsQuery])
+  }, [categoryProductsQuery, setLoading])
 
   if (products) {
     return (
       <div className="category">
         <h1 className="category__title">{categoryRef}</h1>
         <div className="category__items">
-          {products == 0 ? (
+          {products === 0 ? (
             <h6 className="category__no-products">
               No products for
               <br />'{categoryRef}'<br />

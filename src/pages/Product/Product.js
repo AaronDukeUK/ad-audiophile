@@ -13,7 +13,7 @@ import { useShoppingCart } from "../../context/ShoppingCartContext"
 import { useSite } from "../../context/SiteContext"
 
 export default function Product() {
-  const { setLoading, loading } = useSite()
+  const { setLoading } = useSite()
 
   const navigate = useNavigate()
   const { product: productRef } = useParams()
@@ -57,7 +57,7 @@ export default function Product() {
       setLoading(false)
     }
     fetchData().catch(console.error)
-  }, [ProductQuery])
+  }, [ProductQuery, setLoading])
 
   const handleAddToCart = () => {
     addToCart(

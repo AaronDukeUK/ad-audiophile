@@ -91,8 +91,6 @@ export function ShoppingCartProvider({ children }) {
     setCartItems([])
   }
 
-  const mobileMenu = document.querySelector(".mobile-menu")
-
   return (
     <ShoppingCartContext.Provider
       value={{

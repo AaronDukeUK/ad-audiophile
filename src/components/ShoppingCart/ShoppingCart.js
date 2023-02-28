@@ -2,7 +2,6 @@ import "./ShoppingCart.scss"
 
 import { useShoppingCart } from "../../context/ShoppingCartContext"
 import { formatCurrency } from "../../utilities/formatCurrency"
-import { Link } from "react-router-dom"
 import { urlFor } from "../../lib/client"
 
 const ShoppingCart = ({ isOpen }) => {
@@ -26,7 +25,7 @@ const ShoppingCart = ({ isOpen }) => {
             </p>
           )}
         </div>
-        {cartItems.length == 0 && (
+        {cartItems.length === 0 && (
           <div className="cart__empty">
             <p>No items in your cart.</p>
           </div>

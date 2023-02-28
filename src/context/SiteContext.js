@@ -31,7 +31,7 @@ export function SiteProvider({ children }) {
         loader.classList.remove("loader--active")
       }, 10)
     }
-  }, [loading])
+  }, [loading, loader.classList])
 
   // fetching the data
   useEffect(() => {
@@ -48,7 +48,7 @@ export function SiteProvider({ children }) {
     }
 
     fetchData().then(setLoading(false)).catch(console.error)
-  }, [siteQuery])
+  }, [])
 
   return (
     <SiteContext.Provider
