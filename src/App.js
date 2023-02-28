@@ -8,7 +8,7 @@ import {
 import { useLayoutEffect } from "react"
 
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
-import { SiteProvider, useSite } from "./context/SiteContext"
+import { SiteProvider } from "./context/SiteContext"
 
 // components
 import { Navbar } from "./components"
@@ -17,7 +17,6 @@ import Footer from "./components/Footer/Footer"
 // styles
 import "./main.scss"
 import { Home, Category, Product } from "./pages"
-import { useEffect } from "react"
 
 const Wrapper = ({ children }) => {
   const location = useLocation()

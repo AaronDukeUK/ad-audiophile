@@ -14,7 +14,7 @@ export default function FeaturedProducts() {
           <img
             className="featured__image"
             src={urlFor(featured[1].image.asset.url)}
-            alt="speaker featured image"
+            alt="featured product"
           />
           <h4 className="featured__title featured__title--white">ZX9</h4>
           <h4 className="featured__title featured__title--white">SPEAKER</h4>
