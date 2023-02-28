@@ -1,21 +1,22 @@
 export default {
-  name: "category",
-  title: "Category",
+  name: "hero",
+  title: "Hero",
   type: "document",
   fields: [
+    {
+      name: "above",
+      title: "Above Text",
+      type: "string",
+    },
     {
       name: "title",
       title: "Title",
       type: "string",
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
+      name: "text",
+      title: "Text",
+      type: "text",
     },
     {
       name: "image",

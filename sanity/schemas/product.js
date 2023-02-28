@@ -1,85 +1,73 @@
 export default {
-  name: 'product',
-  title: 'Product',
-  type: 'document',
+  name: "product",
+  title: "Product",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "in_stock",
+      title: "In Stock",
+      type: "boolean",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "new_product",
+      title: "New Product",
+      type: "boolean",
+    },
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
       },
     },
     {
-      title: 'Default variant',
-      name: 'defaultProductVariant',
-      type: 'productVariant',
+      name: "info",
+      title: "Info",
+      type: "text",
     },
     {
-      title: 'Variants',
-      name: 'variants',
-      type: 'array',
+      name: "features",
+      title: "Features",
+      type: "text",
+    },
+    {
+      name: "in_the_Box",
+      title: "In The Box",
+      type: "text",
+    },
+    {
+      name: "price",
+      title: "Price",
+      type: "number",
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+    },
+    {
+      name: "gallery_images",
+      title: "Gallery Images",
+      type: "array",
+      of: [{ type: "image" }],
+    },
+    {
+      name: "categories",
+      title: "Categories",
+      type: "array",
       of: [
         {
-          title: 'Variant',
-          type: 'productVariant',
+          type: "reference",
+          to: { type: "category" },
         },
       ],
-    },
-    {
-      title: 'Tags',
-      name: 'tags',
-      type: 'array',
-      of: [
-        {
-          type: 'string',
-        },
-      ],
-      options: {
-        layout: 'tags',
-      },
-    },
-    {
-      name: 'vendor',
-      title: 'Vendor',
-      type: 'reference',
-      to: {type: 'vendor'},
-    },
-    {
-      name: 'blurb',
-      title: 'Blurb',
-      type: 'localeString',
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: {type: 'category'},
-        },
-      ],
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'localeBlockContent',
     },
   ],
-
-  preview: {
-    select: {
-      title: 'title',
-      manufactor: 'manufactor.title',
-      media: 'defaultProductVariant.images[0]',
-    },
-  },
 }

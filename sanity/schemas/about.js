@@ -1,6 +1,6 @@
 export default {
-  name: "category",
-  title: "Category",
+  name: "about",
+  title: "About",
   type: "document",
   fields: [
     {
@@ -9,13 +9,9 @@ export default {
       type: "string",
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
+      name: "text",
+      title: "Text",
+      type: "text",
     },
     {
       name: "image",

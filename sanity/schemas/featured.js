@@ -1,6 +1,6 @@
 export default {
-  name: "category",
-  title: "Category",
+  name: "featured",
+  title: "Featured",
   type: "document",
   fields: [
     {
@@ -16,6 +16,11 @@ export default {
         source: "title",
         maxLength: 96,
       },
+    },
+    {
+      name: "info",
+      title: "Info",
+      type: "text",
     },
     {
       name: "image",
