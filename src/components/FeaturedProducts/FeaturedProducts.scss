@@ -6,6 +6,10 @@
   justify-items: center;
   gap: 24px;
 
+  @media screen and (width >= 1110px) {
+    gap: 48px;
+  }
+
   &__container {
     width: 100%;
     display: flex;
@@ -18,6 +22,10 @@
       gap: 10px;
       max-width: 689px;
     }
+    @media screen and (width >= 1150px) {
+      gap: 30px;
+      max-width: 1110px;
+    }
   }
 
   &__item {
@@ -29,11 +37,17 @@
     border-radius: 8px;
     background-repeat: no-repeat;
     background-position: center;
+
     @media screen and (width >= 768px) {
       max-width: 689px;
       background-size: cover;
       padding: 64px 24px;
     }
+
+    @media screen and (width >= 1150px) {
+      max-width: 1110px;
+    }
+
     &--main {
       text-align: center;
       background-position: center top;
@@ -41,6 +55,7 @@
       align-items: center;
       justify-content: center;
       background-image: url("../../assets/featured/main-mobile.png");
+
       @media screen and (width >= 768px) {
         background-image: url("../../assets/featured/main-tablet.png");
         h4 {
@@ -48,7 +63,22 @@
           line-height: 56px;
         }
       }
+
+      @media screen and (width >= 1150px) {
+        background-image: url("../../assets/featured/main-desktop.png");
+        text-align: left;
+        background-position: center;
+        align-items: flex-start;
+        justify-content: center;
+        height: 560px;
+        & > h4,
+        a,
+        p {
+          margin-left: 666px;
+        }
+      }
     }
+
     &--speaker {
       background-image: url("../../assets/featured/zx7-mobile.png");
       align-items: flex-start;
@@ -56,18 +86,31 @@
       height: 320px;
       @media screen and (width >= 768px) {
         background-image: url("../../assets/featured/zx7-tablet.png");
-
         padding-left: 62px;
+        h4 {
+          font-size: 1.75rem;
+        }
+      }
+      @media screen and (width >= 1150px) {
+        background-image: url("../../assets/featured/zx7-desktop.png");
+        padding-left: 95px;
       }
     }
+
     &--image {
       background-image: url("../../assets/featured/yx1-mobile.png");
       height: 200px;
       @media screen and (width >= 768px) {
         height: 320px;
+        width: 339px;
         background-image: url("../../assets/featured/yx1-tablet.png");
       }
+      @media screen and (width >= 1150px) {
+        background-image: url("../../assets/featured/yx1-desktop.png");
+        width: 540px;
+      }
     }
+
     &--text {
       background-color: $grey;
       align-items: flex-start;
@@ -75,13 +118,27 @@
       height: 200px;
       @media screen and (width >= 768px) {
         height: 320px;
+        width: 339px;
         padding-left: 42px;
+        h4 {
+          font-size: 1.75rem;
+        }
+      }
+      @media screen and (width >= 1150px) {
+        height: 320px;
+        padding-left: 95px;
+        width: 540px;
       }
     }
   }
+
   &__image {
     margin-bottom: 32px;
+    @media screen and (width >= 1150px) {
+      display: none;
+    }
   }
+
   &__title {
     margin-bottom: 32px;
     &--white {
@@ -91,6 +148,7 @@
       margin-bottom: 0;
     }
   }
+
   &__body {
     &--white {
       margin: 24px 0;

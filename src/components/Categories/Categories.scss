@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 .categories {
-  padding: 40px 24px;
+  padding: 100px 24px;
   margin: 0 auto;
   max-width: 375px;
   display: flex;
@@ -12,6 +12,10 @@
     flex-direction: row;
     padding-top: 150px;
     gap: 10px;
+  }
+  @media screen and (width >= 1150px) {
+    padding: 200px 24px 80px 24px;
+    gap: 30px;
   }
   &__section {
     width: 100%;
@@ -33,9 +37,16 @@
     @media screen and (width >= 768px) {
       min-width: 223px;
     }
+    @media screen and (width >= 1150px) {
+      min-width: 350px;
+    }
   }
   &__image {
     height: 104px;
+    @media screen and (width >= 1150px) {
+      height: 150px;
+      width: 125px;
+    }
   }
   &__blur {
     width: 95px;
@@ -48,6 +59,9 @@
     font-weight: $weight-header;
     letter-spacing: 1.07px;
     text-transform: uppercase;
+    @media screen and (width >= 1150px) {
+      font-size: 1.125rem;
+    }
   }
   &__button {
     margin: 17px 0 22px 0;
