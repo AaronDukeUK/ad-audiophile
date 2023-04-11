@@ -65,7 +65,7 @@ export default function Product() {
         id: product._id,
         title: product.title,
         price: product.price,
-        imageUrl: product.image.asset.url,
+        imageUrl: product.main_image.asset.url,
       },
       quantity
     )
@@ -81,7 +81,6 @@ export default function Product() {
   }
 
   if (product) {
-    console.log(product)
     return (
       <>
         <div className="product">
