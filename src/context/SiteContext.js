@@ -19,8 +19,6 @@ export function SiteProvider({ children }) {
 
   const [loading, setLoading] = useState(true)
 
-  const loader = document.querySelector(".loader")
-
   // fetching the data
   useEffect(() => {
     const fetchData = async () => {
