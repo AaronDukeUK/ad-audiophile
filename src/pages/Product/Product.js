@@ -34,7 +34,7 @@ export default function Product() {
       features,
       in_the_Box,
       price,
-      image{
+      main_image{
         asset->{
           _id,
           url
@@ -81,47 +81,54 @@ export default function Product() {
   }
 
   if (product) {
+    console.log(product)
     return (
       <>
         <div className="product">
           <p className="product__goback" onClick={() => navigate(-1)}>
             Go Back
           </p>
-          <img
-            src={urlFor(product.image.asset.url)}
-            alt=""
-            className="product__image"
-          />
-          {product.new_product && (
-            <small className="product__overline">NEW PRODUCT</small>
-          )}
-          <h4 className="product__title">{product.title}</h4>
-          <p className="product__body">{product.info}</p>
-          <h6 className="product__price">£{product.price}</h6>
-          {product.in_stock ? (
-            <div className="product__addToCartContainer">
-              <div className="product__quantityContainer">
-                <button onClick={() => setQuantity(quantity + 1)}>
-                  <p>+</p>
-                </button>
-                <p className="product__quantity">{quantity}</p>
-                <button onClick={handleDecrease}>
-                  <p>-</p>
-                </button>
-              </div>
-
-              <button
-                className="button button--orange"
-                onClick={handleAddToCart}
-              >
-                ADD TO CART
-              </button>
+          <div className="product__top-wrapper">
+            <div className="product__image-wrapper">
+              <img
+                src={urlFor(product.main_image.asset.url)}
+                alt=""
+                className="product__image"
+              />
             </div>
-          ) : (
-            <button className="button button--outline" disabled>
-              OUT OF STOCK
-            </button>
-          )}
+            <div className="product__info">
+              {product.new_product && (
+                <small className="product__overline">NEW PRODUCT</small>
+              )}
+              <h4 className="product__title">{product.title}</h4>
+              <p className="product__body">{product.info}</p>
+              <h6 className="product__price">£{product.price}</h6>
+              {product.in_stock ? (
+                <div className="product__addToCartContainer">
+                  <div className="product__quantityContainer">
+                    <button onClick={() => setQuantity(quantity + 1)}>
+                      <p>+</p>
+                    </button>
+                    <p className="product__quantity">{quantity}</p>
+                    <button onClick={handleDecrease}>
+                      <p>-</p>
+                    </button>
+                  </div>
+
+                  <button
+                    className="button button--orange"
+                    onClick={handleAddToCart}
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+              ) : (
+                <button className="button button--outline" disabled>
+                  OUT OF STOCK
+                </button>
+              )}
+            </div>
+          </div>
           <h5>FEATURES</h5>
           <p className="product__features">{product.features}</p>
           <h5>IN THE BOX</h5>

@@ -11,15 +11,27 @@
     background-color: $off-black;
     color: #ffffff;
     padding: 32px 0;
+    @media screen and (width >= 768px) {
+      padding: 95px 0;
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+    @media screen and (width >= 1150px) {
+    }
   }
   &__items {
     width: 100%;
-    padding: 64px 24px 80px 24px;
+    padding: 64px 24px 0px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 120px;
+    @media screen and (width >= 768px) {
+      padding: 120px 40px 40px 40px;
+    }
+    @media screen and (width >= 1150px) {
+    }
   }
   &__no-products {
     text-align: center;

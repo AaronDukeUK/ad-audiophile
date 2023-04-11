@@ -12,7 +12,7 @@ const AlsoLike = ({ productId }) => {
       _id,
       slug,
       title,
-      image{
+      main_image{
         asset->{
           _id,
           url
@@ -39,7 +39,7 @@ const AlsoLike = ({ productId }) => {
             <div className="alsolike__image-container">
               <img
                 className="alsolike__image"
-                src={urlFor(product.image.asset.url)}
+                src={urlFor(product.main_image.asset.url)}
                 alt={product.title}
               />
             </div>

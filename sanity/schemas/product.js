@@ -48,8 +48,8 @@ export default {
       type: "number",
     },
     {
-      name: "image",
-      title: "Image",
+      name: "main_image",
+      title: "Main Image",
       type: "image",
     },
     {

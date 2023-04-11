@@ -6,25 +6,29 @@ import { urlFor } from "../../lib/client"
 
 const CategoryProduct = ({ product }) => {
   if (product) {
+    console.log(product)
     return (
       <div className="category-product">
-        <img
-          className="category-product__image"
-          src={urlFor(product.image.asset.url)}
-          alt={""}
-        />
-
-        {product && (
-          <small className="category-product__overline">NEW PRODUCT</small>
-        )}
-        <h4 className="category-product__title">{product.title}</h4>
-        <p className="category-product__body">{product.info}</p>
-        <Link
-          className="button button--orange"
-          to={`/products/${product.slug.current}`}
-        >
-          SEE PRODUCT
-        </Link>
+        <div className="category-product__image-wrapper">
+          <img
+            className="category-product__image"
+            src={urlFor(product.main_image.asset.url)}
+            alt={product.title}
+          />
+        </div>
+        <div className="category-product__text-wrapper">
+          {product.new_product && (
+            <small className="category-product__overline">NEW PRODUCT</small>
+          )}
+          <h4 className="category-product__title">{product.title}</h4>
+          <p className="category-product__body">{product.info}</p>
+          <Link
+            className="button button--orange"
+            to={`/products/${product.slug.current}`}
+          >
+            SEE PRODUCT
+          </Link>
+        </div>
       </div>
     )
   }

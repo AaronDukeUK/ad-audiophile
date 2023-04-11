@@ -7,17 +7,23 @@
   background-color: $off-black;
   padding: 32px 24px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &__container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 327px;
     @media screen and (width >= 768px) {
+      width: 689px;
       justify-content: flex-start;
       gap: 42px;
     }
     @media screen and (width >= 1150px) {
-      max-width: 1110px;
+      width: 1110px;
       margin: 0 auto;
     }
   }

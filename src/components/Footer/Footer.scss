@@ -5,6 +5,9 @@
   color: $white;
   text-align: center;
   padding: 0 24px 38px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__wrapper {
     position: relative;
@@ -15,6 +18,7 @@
     justify-content: center;
     gap: 48px;
     @media screen and (width >= 768px) {
+      max-width: 689px;
       align-items: flex-start;
       gap: 32px;
     }

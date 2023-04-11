@@ -17,19 +17,20 @@ export default function Category() {
 
   const categoryProductsQuery = `
   *[_type == "category" && slug.current == "${categoryRef}"]{
-    "products": *[_type=='product' && references(^._id)]{ 
+    "products": *[_type=='product' && references(^._id)] | order(new_product desc) { 
       _id,
+      new_product,
       title,
       slug,
       info,
-      image{
+      main_image{
         asset->{
           _id,
           url
         },
       },
-    }
-  }
+    },   
+  } 
 `
 
   useEffect(() => {

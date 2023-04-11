@@ -21,17 +21,6 @@ export function SiteProvider({ children }) {
 
   const loader = document.querySelector(".loader")
 
-  useEffect(() => {
-    if (loading) {
-      loader.classList.add("loader--active")
-    }
-    if (!loading) {
-      setTimeout(() => {
-        loader.classList.remove("loader--active")
-      }, 10)
-    }
-  }, [loading, loader.classList])
-
   // fetching the data
   useEffect(() => {
     const fetchData = async () => {
