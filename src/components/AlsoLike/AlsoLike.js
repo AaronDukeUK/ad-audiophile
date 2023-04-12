@@ -34,24 +34,26 @@ const AlsoLike = ({ productId }) => {
     return (
       <div className="alsolike">
         <h5 className="alsolike__title">YOU MAY ALSO LIKE</h5>
-        {alsoLike.map((product) => (
-          <div key={product._id} className="alsolike__product">
-            <div className="alsolike__image-container">
-              <img
-                className="alsolike__image"
-                src={urlFor(product.main_image.asset.url)}
-                alt={product.title}
-              />
+        <div className="alsolike__products">
+          {alsoLike.map((product) => (
+            <div key={product._id} className="alsolike__product">
+              <div className="alsolike__image-container">
+                <img
+                  className="alsolike__image"
+                  src={urlFor(product.main_image.asset.url)}
+                  alt={product.title}
+                />
+              </div>
+              <h5>{product.title}</h5>
+              <Link
+                className="alsolike__button button button--orange"
+                to={`/products/${product.slug.current}`}
+              >
+                SEE PRODUCT
+              </Link>
             </div>
-            <h5>{product.title}</h5>
-            <Link
-              className="button button--orange"
-              to={`/products/${product.slug.current}`}
-            >
-              SEE PRODUCT
-            </Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     )
   }

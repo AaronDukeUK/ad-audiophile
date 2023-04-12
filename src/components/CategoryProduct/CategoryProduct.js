@@ -6,7 +6,6 @@ import { urlFor } from "../../lib/client"
 
 const CategoryProduct = ({ product }) => {
   if (product) {
-    console.log(product)
     return (
       <div className="category-product">
         <div className="category-product__image-wrapper">

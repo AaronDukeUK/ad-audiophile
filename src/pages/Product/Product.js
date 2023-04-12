@@ -128,10 +128,30 @@ export default function Product() {
               )}
             </div>
           </div>
-          <h5>FEATURES</h5>
-          <p className="product__features">{product.features}</p>
-          <h5>IN THE BOX</h5>
-          <p className="product__in-the-box">{product.in_the_Box}</p>
+          <div className="product__middle-wrapper">
+            <div className="product__features">
+              <h5>FEATURES</h5>
+              <p className="product__features">{product.features}</p>
+            </div>
+            <div className="product__in-the-box">
+              <h5>IN THE BOX</h5>
+              <p>
+                <span>1x</span> Headphone Unit
+              </p>
+              <p>
+                <span>2x</span> Replacement Earcups
+              </p>
+              <p>
+                <span>1x</span> User Manual
+              </p>
+              <p>
+                <span>1x</span> 3.5mm Audio Cable
+              </p>
+              <p>
+                <span>1x</span> Travel Bag
+              </p>
+            </div>
+          </div>
           {product.gallery_images && (
             <div className="product__extra-images">
               {product.gallery_images.map((image) => (
