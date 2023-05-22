@@ -14,6 +14,24 @@ const ShoppingCart = ({ isOpen }) => {
     decreaseCartQuantity,
   } = useShoppingCart()
 
+  const checkout = async () => {
+    await fetch("http://localhost:4000/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ items: cartItems }),
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .then((res) => {
+        if (res.url) {
+          window.location = res.url
+        }
+      })
+  }
+
   return (
     <div className={`cart ${isOpen ? "cart--active" : ""}`} onClick={closeCart}>
       <div className="cart__container" onClick={(e) => e.stopPropagation()}>
@@ -68,7 +86,10 @@ const ShoppingCart = ({ isOpen }) => {
                 )}
               </h6>
             </div>
-            <button className="button button--orange cart__button">
+            <button
+              className="button button--orange cart__button"
+              onClick={checkout}
+            >
               CHECKOUT
             </button>
           </>

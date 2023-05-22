@@ -11,6 +11,7 @@ export default function Navbar() {
   const {
     openCart,
     closeCart,
+    cartQuantity,
     isCartOpen,
     openMobileMenu,
     closeMobileMenu,
@@ -61,6 +62,9 @@ export default function Navbar() {
               className="navbar__cart"
             >
               <CartIcon />
+              {cartQuantity > 0 && (
+                <span className="navbar__cart-quantity">{cartQuantity}</span>
+              )}
             </div>
           </div>
         </nav>

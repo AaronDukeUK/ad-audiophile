@@ -26,7 +26,7 @@ export default function Product() {
   const ProductQuery = `
   *[_type == "product" && slug.current == "${productRef}"]{
     
-      _id,
+      stripe_id,
       in_stock,
       new_product,
       title,
@@ -62,13 +62,14 @@ export default function Product() {
   const handleAddToCart = () => {
     addToCart(
       {
-        id: product._id,
+        id: product.stripe_id,
         title: product.title,
         price: product.price,
         imageUrl: product.main_image.asset.url,
       },
       quantity
     )
+    console.log(product)
     setQuantity(1)
     openCart()
   }
