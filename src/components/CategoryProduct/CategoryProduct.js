@@ -11,7 +11,7 @@ const CategoryProduct = ({ product }) => {
         <div className="category-product__image-wrapper">
           <img
             className="category-product__image"
-            src={urlFor(product.main_image.asset.url)}
+            src={urlFor(product.main_image.asset.url).format("webp")}
             alt={product.title}
           />
         </div>

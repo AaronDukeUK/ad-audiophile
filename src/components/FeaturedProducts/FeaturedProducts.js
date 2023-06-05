@@ -13,7 +13,7 @@ export default function FeaturedProducts() {
         <div className="featured__item featured__item--main">
           <img
             className="featured__image"
-            src={urlFor(featured[1].image.asset.url)}
+            src={urlFor(featured[1].image.asset.url).format("webp")}
             alt="featured product"
           />
           <h2 className="featured__title featured__title--white">ZX9</h2>

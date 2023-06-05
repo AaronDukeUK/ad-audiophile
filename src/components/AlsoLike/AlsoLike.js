@@ -40,7 +40,7 @@ const AlsoLike = ({ productId }) => {
               <div className="alsolike__image-container">
                 <img
                   className="alsolike__image"
-                  src={urlFor(product.main_image.asset.url)}
+                  src={urlFor(product.main_image.asset.url).format("webp")}
                   alt={product.title}
                 />
               </div>

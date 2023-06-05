@@ -112,7 +112,8 @@ button {
     background-color: $tan;
     color: $white;
     &:hover {
-      background-color: #fbaf85;
+      background-color: $white;
+      color: $tan;
     }
   }
   &--black {

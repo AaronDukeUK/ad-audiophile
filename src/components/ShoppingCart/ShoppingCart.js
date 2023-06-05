@@ -51,7 +51,7 @@ const ShoppingCart = ({ isOpen }) => {
         {cartItems.map((item, i) => (
           <div className="cartItem" key={i}>
             <img
-              src={urlFor(item.image)}
+              src={urlFor(item.image).format("webp")}
               alt={item.name}
               className="cartItem__image"
             />

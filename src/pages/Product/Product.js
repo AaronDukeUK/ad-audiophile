@@ -91,7 +91,7 @@ export default function Product() {
           <div className="product__top-wrapper">
             <div className="product__image-wrapper">
               <img
-                src={urlFor(product.main_image.asset.url)}
+                src={urlFor(product.main_image.asset.url).format("webp")}
                 alt=""
                 className="product__image"
               />
@@ -159,7 +159,7 @@ export default function Product() {
                 <img
                   className="product__extra-image"
                   key={image.asset._id}
-                  src={urlFor(image.asset.url)}
+                  src={urlFor(image.asset.url).format("webp")}
                   alt={image.asset._id}
                 />
               ))}
