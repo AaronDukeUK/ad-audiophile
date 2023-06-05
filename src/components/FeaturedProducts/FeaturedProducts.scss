@@ -54,10 +54,10 @@
       background-color: $tan;
       align-items: center;
       justify-content: center;
-      background-image: url("../../assets/featured/main-mobile.png");
+      background-image: url("../../assets/featured/main-mobile.webp");
 
       @media screen and (width >= 768px) {
-        background-image: url("../../assets/featured/main-tablet.png");
+        background-image: url("../../assets/featured/main-tablet.webp");
         h2 {
           font-size: 3.5rem;
           line-height: 56px;
@@ -65,7 +65,7 @@
       }
 
       @media screen and (width >= 1150px) {
-        background-image: url("../../assets/featured/main-desktop.png");
+        background-image: url("../../assets/featured/main-desktop.webp");
         text-align: left;
         background-position: center;
         align-items: flex-start;
@@ -80,33 +80,33 @@
     }
 
     &--speaker {
-      background-image: url("../../assets/featured/zx7-mobile.png");
+      background-image: url("../../assets/featured/zx7-mobile.webp");
       align-items: flex-start;
       justify-content: center;
       height: 320px;
       @media screen and (width >= 768px) {
-        background-image: url("../../assets/featured/zx7-tablet.png");
+        background-image: url("../../assets/featured/zx7-tablet.webp");
         padding-left: 62px;
         h2 {
           font-size: 1.75rem;
         }
       }
       @media screen and (width >= 1150px) {
-        background-image: url("../../assets/featured/zx7-desktop.png");
+        background-image: url("../../assets/featured/zx7-desktop.webp");
         padding-left: 95px;
       }
     }
 
     &--image {
-      background-image: url("../../assets/featured/yx1-mobile.png");
+      background-image: url("../../assets/featured/yx1-mobile.webp");
       height: 200px;
       @media screen and (width >= 768px) {
         height: 320px;
         width: 339px;
-        background-image: url("../../assets/featured/yx1-tablet.png");
+        background-image: url("../../assets/featured/yx1-tablet.webp");
       }
       @media screen and (width >= 1150px) {
-        background-image: url("../../assets/featured/yx1-desktop.png");
+        background-image: url("../../assets/featured/yx1-desktop.webp");
         width: 540px;
       }
     }

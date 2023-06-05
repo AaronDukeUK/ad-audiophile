@@ -23,15 +23,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../../assets/hero/hero-tablet.png");
+    background-image: url("../../assets/hero/hero-tablet.webp");
     @media screen and (width >= 768px) {
       max-width: 768px;
       height: 769px;
-      background-image: url("../../assets/hero/hero-tablet.png");
+      background-image: url("../../assets/hero/hero-tablet.webp");
     }
     @media screen and (width >= 1150px) {
       max-width: 1110px;
-      background-image: url("../../assets/hero/hero-desktop.png");
+      background-image: url("../../assets/hero/hero-desktop.webp");
       background-position: bottom;
       align-items: flex-start;
       justify-content: center;

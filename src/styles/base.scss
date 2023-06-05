@@ -97,7 +97,7 @@ a {
 button {
   font-weight: 700;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1);
   font-size: 0.813rem;
   line-height: 18px;
   letter-spacing: 1px;
@@ -119,11 +119,19 @@ button {
   &--black {
     color: $white;
     background-color: $black;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
   }
   &--outline {
     color: $black;
     background: transparent;
     border: 1px solid $black;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
   }
 }
 
