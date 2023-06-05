@@ -15,7 +15,7 @@ const ShoppingCart = ({ isOpen }) => {
   } = useShoppingCart()
 
   const checkout = async () => {
-    await fetch("https://adaudiophile.netlify.app/checkout", {
+    await fetch("https://ad-audiophile-server.onrender.com/checkout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
