@@ -58,7 +58,7 @@
 
       @media screen and (width >= 768px) {
         background-image: url("../../assets/featured/main-tablet.png");
-        h4 {
+        h2 {
           font-size: 3.5rem;
           line-height: 56px;
         }
@@ -71,7 +71,7 @@
         align-items: flex-start;
         justify-content: center;
         height: 560px;
-        & > h4,
+        & > h2,
         a,
         p {
           margin-left: 666px;
@@ -87,7 +87,7 @@
       @media screen and (width >= 768px) {
         background-image: url("../../assets/featured/zx7-tablet.png");
         padding-left: 62px;
-        h4 {
+        h2 {
           font-size: 1.75rem;
         }
       }
@@ -120,7 +120,7 @@
         height: 320px;
         width: 339px;
         padding-left: 42px;
-        h4 {
+        h2 {
           font-size: 1.75rem;
         }
       }

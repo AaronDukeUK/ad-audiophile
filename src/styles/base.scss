@@ -31,19 +31,22 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 58px;
-  letter-spacing: 2px;
-}
-
-h2 {
   font-size: 2.25rem;
   line-height: 44px;
   letter-spacing: 1.5px;
-  max-width: 379px;
   @media screen and (width >= 768px) {
     font-size: 3.5rem;
     line-height: 58px;
+  }
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 38px;
+  letter-spacing: 2px;
+  @media screen and (width >= 768px) {
+    font-size: 2.5rem;
+    line-height: 44px;
   }
 }
 
@@ -54,13 +57,6 @@ h3 {
 }
 
 h4 {
-  font-size: 1.75rem;
-  line-height: 38px;
-  letter-spacing: 2px;
-  @media screen and (width >= 768px) {
-    font-size: 2.5rem;
-    line-height: 44px;
-  }
 }
 
 h5 {
@@ -92,7 +88,7 @@ small {
 a {
   font-weight: 700;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 1);
   font-size: 0.813rem;
   line-height: 18px;
   letter-spacing: 1px;

@@ -43,6 +43,7 @@
   }
   &__image {
     height: 104px;
+    object-fit: contain;
     @media screen and (width >= 1150px) {
       height: 150px;
       width: 125px;

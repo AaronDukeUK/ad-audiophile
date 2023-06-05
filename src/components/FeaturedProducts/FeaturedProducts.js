@@ -16,8 +16,8 @@ export default function FeaturedProducts() {
             src={urlFor(featured[1].image.asset.url)}
             alt="featured product"
           />
-          <h4 className="featured__title featured__title--white">ZX9</h4>
-          <h4 className="featured__title featured__title--white">SPEAKER</h4>
+          <h2 className="featured__title featured__title--white">ZX9</h2>
+          <h2 className="featured__title featured__title--white">SPEAKER</h2>
           <p className="featured__body featured__body--white">
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
@@ -28,7 +28,7 @@ export default function FeaturedProducts() {
         </div>
 
         <div className="featured__item featured__item--speaker">
-          <h4 className="featured__title">ZX7 SPEAKER</h4>
+          <h2 className="featured__title">ZX7 SPEAKER</h2>
           <Link className="button button--outline" to="/products/zx7-speaker">
             SEE PRODUCT
           </Link>
@@ -37,7 +37,7 @@ export default function FeaturedProducts() {
           <div className="featured__item featured__item--image"></div>
 
           <div className="featured__item featured__item--text">
-            <h4 className="featured__title">YX1 EARPHONES</h4>
+            <h2 className="featured__title">YX1 EARPHONES</h2>
             <Link
               className="button button--outline"
               to="/products/yx1-wireless-earphones"

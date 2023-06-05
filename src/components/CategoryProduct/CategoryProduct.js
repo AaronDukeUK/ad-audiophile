@@ -19,7 +19,7 @@ const CategoryProduct = ({ product }) => {
           {product.new_product && (
             <small className="category-product__overline">NEW PRODUCT</small>
           )}
-          <h4 className="category-product__title">{product.title}</h4>
+          <h2 className="category-product__title">{product.title}</h2>
           <p className="category-product__body">{product.info}</p>
           <Link
             className="button button--orange"

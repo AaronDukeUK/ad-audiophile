@@ -39,6 +39,10 @@
     }
   }
 
+  h1 {
+    max-width: 379px;
+  }
+
   &__overline {
     color: $white;
     opacity: 0.5;

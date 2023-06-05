@@ -100,7 +100,7 @@ export default function Product() {
               {product.new_product && (
                 <small className="product__overline">NEW PRODUCT</small>
               )}
-              <h4 className="product__title">{product.title}</h4>
+              <h2 className="product__title">{product.title}</h2>
               <p className="product__body">{product.info}</p>
               <h6 className="product__price">£{product.price}</h6>
               {product.in_stock ? (

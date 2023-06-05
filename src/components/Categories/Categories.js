@@ -16,7 +16,7 @@ const Categories = () => {
           <div key={category._id} className="categories__section">
             <img
               className="categories__image"
-              src={urlFor(category.image.asset.url)}
+              src={`${urlFor(category.image.asset.url)}?format=auto`}
               alt={category.title}
             />
             <div className="categories__blur"></div>
